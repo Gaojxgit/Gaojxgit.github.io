@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>movie</title>
+		<link href="css/movie.css" rel="stylesheet" />
+		<script src="js/getPage.js"></script>
+	</head>
+	<body>
+		<nav>
+			<header>
+				<h3>小站</h3>
+				<a href="/index">听音乐</a>
+				<a class="active">搜电影</a>
+				<a href="/play">玩游戏</a>
+				<a href="/resume">个人简历</a>
+			</header>
+		</nav>
+		<section class="banner">
+				<div class="image">
+					<img src="img/banner1.jpg" title="绑架者" />
+				</div>
+				<div class="content">
+					<img src="img/banner1s.jpg" title="绑架者" data-src='https://movie.douban.com/subject/26602933/'/>
+					<div class="infor">
+						<strong>正在热映</strong>
+						<h3>《绑架者》</h3>
+						<h4>107分钟 - 科幻/动作 - 北京134家影院上映1678场</h4>
+						<p><span></span><em>3.31 警察与绑匪共同找寻真相</em></p>
+					</div>
+					<a class="btn" title="prev"></a>
+					<a class="btn" title="next"></a>
+				</div>	
+				<ul class="pot">
+					<li class="active"></li>
+					<li></li>
+				</ul>
+		</section>	
+		<main>
+			<section class="movie_content" id="#movie_content">
+				<div class="tag_title">
+					<p class="active">经典</p><span>|</span><p>华语</p><span>|</span><p>动作</p><span>|</span><p>悬疑</p><span>|</span><p>科幻</p>
+				</div>
+				<div class="sort_title">
+					<label><input type="radio" name="class_basic" value="default" checked="checked"/>默认排序</label>	
+					<label><input type="radio" name="class_basic" value="rating"/>按评分排序</label>			
+				</div>
+				<div class="load_gif"><img src="img/load.gif"></div>
+				<ul class="movie_list">
+					
+				</ul>
+			</section>
+			<section class="pagination">
+				<div id="page">
+					
+				</div>
+			</section>
+			<div class="get_top"><canvas id="canvas" width="60" height="50" ></canvas></div>
+		</main>
+		
+		<script src="js/movie.js"></script>
+	</body>
+</html>

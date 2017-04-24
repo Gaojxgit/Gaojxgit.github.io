@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link href="css/bootstrap.css" rel="stylesheet"/>
+		<link href="css/index.css" rel="stylesheet"/>
+		<title>首页</title>
+	</head>
+	<body>
+		<audio id="music" loop="loop" src="http://m2.music.126.net/2uk3geKVMPirG3t4xuxRfw==/1267736906842385.mp3">	
+		</audio>
+		<nav class="navbar navbar-default navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">小站</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">听音乐</a></li>
+					<li><a href="/movie">搜电影</a></li>
+					<li><a href="/play">玩游戏</a></li>
+					<li><a href="/resume">个人简历</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="moveplay">
+						<img src="img/koen.gif">
+						<img src="img/zhen.gif" />
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="musiclist">
+						<p>播放列表</p>
+						<div class="musicbox">
+							<ol>
+								<li class="active"><span><nobr>you belong to me</nobr></span><a><nobr> Carla Bruni</nobr></a></li>
+								<li><span><nobr>Lost On You</nobr></span><a><nobr>LP</nobr></a></li>
+								<li><span><nobr>Night Like This</nobr></span><a><nobr>LP</nobr></a></li>
+								<li><span><nobr>In My Secret Life</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>I'm Your Man</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>You Have Loved Enough</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>Hallelujah</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>A Thousand Kisses Deep</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>My Oh My</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>Famous Blue Raincoat</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>You Want It Darker</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>Did I Ever Love You</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>Blowin' In the Wind</nobr></span><a><nobr>Bob Dylan</nobr></a></li>
+								<li><span><nobr>Knockin' On Heaven's Door</nobr></span><a><nobr>Bob Dylan</nobr></a></li>
+								<li><span><nobr>Workingman's Blues</nobr></span><a><nobr>Bob Dylan</nobr></a></li>
+								<li><span><nobr>You Want It Darker</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>Did I Ever Love You</nobr></span><a><nobr>Leonard Cohen</nobr></a></li>
+								<li><span><nobr>Blowin' In the Wind</nobr></span><a><nobr>Bob Dylan</nobr></a></li>
+								<li><span><nobr>Knockin' On Heaven's Door</nobr></span><a><nobr>Bob Dylan</nobr></a></li>
+								<li><span><nobr>Workingman's Blues</nobr></span><a><nobr>Bob Dylan</nobr></a></li>
+								
+							</ol>
+							<div class="scroll">
+								<div class="scrollbar"></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer  class="playbar">
+			<div class="btns">
+				<div class="prev"><img src="img/back.gif"/></div>
+				<div class="play"><img src="img/play.gif"/></div>
+				<div class="next"><img src="img/next.gif"/></div>
+			</div>
+			<div class="pro">
+				<span class="curtime">00 : 00</span>
+				<div class="bar">
+					<div class="slide"><canvas id="canvas" width="30" height='30' ></canvas></div>
+					<div class="overslide"></div>
+				</div>
+				<span class="totaltime">04 : 20</span>
+			</div>
+			<div class="vol">
+				<span></span>
+				<div class="volbar">
+					<div class="volslide"></div>
+					<div class="overvolslide"></div>
+				</div>
+			</div>
+			<div class="loop">
+				<span class="repeat"></span>
+			</div>
+		</footer>
+		<script src="js/index.js"></script>
+		<script src="js/jquery-2.1.0.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		
+		<title>游戏</title>
+		<link href="css/play.css" rel="stylesheet" />
+	</head>
+	<body>
+		<nav>
+			<header>
+				<h3>小站</h3>
+				<a href="/index">听音乐</a>
+				<a href="/movie">搜电影</a>
+				<a class="active">玩游戏</a>
+				<a href="/resume">个人简历</a>
+			</header>
+		</nav>
+		<div class="playarea">
+			<ul class="snake">
+				<li class="head"></li>
+			</ul>
+			<div class="pot"></div>
+		</div>
+		<div class="describe">
+			<section class="message">
+				<h4>信息区</h4>
+				<p class="score">当前得分 : <span> 0 </span></p>
+				<ul class="help">
+					<li>1 : 利用键盘的上下左右来控制贪吃蛇的前进方向，不能出界，不能碰到自己的身体部分，不能反方向运动</li>
+					<li>2 : 每吃够十个小球自动升级，运动速度加快，等级越高，单次得分越高</li>
+					<li>3 : 利用下面的模式按钮直接选择要进行的游戏模式</li>
+				</ul>
+			</section>
+			<section class="control">
+				<h4>控制区</h4>
+				<button>开始</button>
+				<button>暂停</button>
+			</section>
+			<section class="mode">
+				<h4>模式区</h4>
+				<button class="active">简单</button>
+				<button>较困难</button>
+				<button>困难</button>
+				<button>高难度</button>
+				<button>极高难度</button>
+			</section>
+		</div>
+		<audio src="audio/score.wav" class="v_score"></audio>
+		<audio src="audio/gameover.wav" class="v_over"></audio>
+		<audio src="audio/update.mp3" class="v_update"></audio>
+		
+		
+		<script src="js/play.js"></script>
+	</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		
+		<title></title>
+		<script src="js/jsonp.js"></script>
+		<script >
+			var s=window.location.href.split('=')[1];
+			jsonp({
+				url:'https://api.douban.com/v2/movie/subject/'+s,
+				data:{
+					
+				},
+				succ:function(data){
+					load(data)
+				}
+			})
+		</script>
+		<style>
+			*{
+				margin:0px;
+				padding: 0px;
+			}
+			ul{
+				list-style: none;
+			}
+			body{
+				background: #111;
+				padding: 0px;
+				margin: 0px;
+				font-family: "微软雅黑";
+				color: #eee;
+			}
+			nav{
+				position: relative;
+			}
+			header{
+				width:1200px;
+				min-width: 1200px;
+				margin:0px auto;
+				color: #f0f0f0;
+			}
+			header h3,header a{
+				float: left;
+			}
+			header h3{
+				margin:0px;
+			}
+			header a{
+				margin-left:20px;
+				font-size: 14px;
+				cursor: pointer;
+				color: #ccc;
+			}
+			header a.active,header a:hover{
+				color:#eee;
+			}
+			header form{
+				margin: 0px;
+				padding: 0px;
+				float: right;
+				width:260px;
+			}
+			header h3,header a,header form{
+				line-height: 50px;
+			}
+			form input,button{
+				font:14px/24px "微软雅黑";
+				color: #666;
+			}
+			main{
+				width:1200px;
+				margin:0px auto;
+			}
+			.clearfix:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			.movie_name h3{
+				font-size:20px;
+				line-height: 30px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.infor>div{
+				float: left;
+			}
+			.movie_img img{
+				width:160px;
+			}
+			.movie_info{
+				width:700px;
+				margin-left: 20px;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			a{
+				text-decoration: none;
+				color: #37a;
+			}
+			.movie_info a:hover{
+				color: #eee;
+				background: #37a;
+			}
+			.movie_rating{
+				width:160px;
+				padding-left: 10px;
+				margin-left: 10px;
+				border-left:1px solid #ccc ;
+			}
+			.movie_rating strong{
+				font:30px/70px "微软雅黑";
+				float: left;
+			}
+			.movie_rating .star,.movie_rating .rating a{
+				float: left;
+				margin-left: 20px;
+			}
+			.star{
+				margin: 10px 0px;
+				height:16px;
+				width:90px;
+				background: url(img/ic_rating_m.png) 0 0 no-repeat;
+			}
+			.movie_massage{
+				margin-top: 30px;
+			}
+			.movie_rating .purchase{
+				text-align: center;
+				margin-top: 50px;
+			}
+			.movie_rating .purchase a{
+				display: inline-block;
+				width:80px;
+				height:40px;
+				font:14px/40px "微软雅黑";
+				background: #eee;
+				color:#e09015;
+				border-radius: 4px;
+			}
+			section h4{
+				font: 16px/30px "微软雅黑";
+				color: #e09015;
+			}
+			.introduce{
+				text-indent:2em;
+				font: 14px/20px "微软雅黑";
+			}
+			.related_pic li{
+				float: left;
+			}
+			.movie_info span.pl{
+				color:#ccc
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<header class="clearfix">
+				<h3>小站</h3>
+				<a href="/index">听音乐</a>
+				<a class="active">搜电影</a>
+				<a href="/play">玩游戏</a>
+			</header>
+		</nav>
+		<main class='clearfix'>
+			<section class="movie_name">
+					<h3></h3>
+			</section>
+			<section class="infor clearfix">
+				<div class="movie_img">
+					<img src="" title="" alt="Contratiempo" >
+				</div>
+				<div class="movie_info">
+			        <span class='pl'>导演</span>: <span class="director"><a href="" ></a></span><br/>
+			        <span class='pl'>编剧</span>:  <span class="writer"><a href="" ></a></span><br/>
+			       	<span class='pl'>主演</span>:  <span class="actors"><a href="/"></a> / <a href="/celebrity/1300235/" ></a> / <a href="/celebrity/1074062/" >何塞·科罗纳</a> / <a href="/celebrity/1000889/" >芭芭拉·蓝妮</a> / <a href="/celebrity/1130170/" >法兰西斯克·欧瑞拉</a> / <a href="/celebrity/1316786/" >帕科·图斯</a> / <a href="/celebrity/1142512/" >大卫·塞尔瓦斯</a> / <a href="/celebrity/1370702/" >伊尼戈·加斯特西</a> / <a href="/celebrity/1370703/" >珊·叶拉姆斯</a> / <a href="/celebrity/1370704/" >马内尔·杜尔索</a> / <a href="/celebrity/1370705/" >布兰卡·马丁内斯</a> / <a href="/celebrity/1345183/" >佩雷·布拉索</a> / <a href="/celebrity/1370706/" >乔迪·布鲁内特</a> / <a href="/celebrity/1092568/" >鲍毕·冈塞莱斯</a> / <a href="/celebrity/1370707/" >玛蒂娜·乌尔塔多</a></span><br/> 
+			       	<span class="pl">类型</span>: <span class="tag"></span><br/>
+			        
+			        <span class="pl">制片国家/地区:</span> <span class="country"></span><br/>
+			        <span class="pl">上映日期:</span>  <span class="year"></span><br/>
+			        <span class="pl">想看:</span> <span class="collects"></span><br/>
+			        <span class="pl">已看:</span> <span class="wish"></span><br/>
+			        <span class="pl">又名:</span> <span class="origin_name"></span><br/>
+				</div>
+				<div class="movie_rating">
+			      	<span>电影评分</span>
+					<div class="rating clearfix">
+						<div>
+							<strong></strong>
+						</div>
+						<div>
+							<span class="star"></span>
+							<a href="#" class="comment"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="movie_massage">
+				<h4 class="movie_massage_title"><span></span>的剧情简介  ·  ·  ·  ·  ·  ·</h4>
+				<p class="introduce">
+					
+				</p>
+			</section>
+		</main>
+		<script>
+
+			function load(data){
+				var title=document.querySelector("title");
+				var movie_name=document.querySelector(".movie_name h3");
+				var movie_img=document.querySelector(".movie_img img");
+				var director=document.querySelector(".director");
+				var writer=document.querySelector(".writer");
+				var actors=document.querySelector(".actors");
+				var tag=document.querySelector(".tag");
+				var year=document.querySelector(".year");
+				var collects=document.querySelector(".collects");
+				var wish=document.querySelector(".wish");
+				var origin_name=document.querySelector(".origin_name");
+				
+				var rating=document.querySelector(".rating strong");
+				var star=document.querySelector(".star");
+				var comments=document.querySelector(".comment")
+				var purchase_link=document.querySelector(".purchase_link");
+				var describtion=document.querySelector(".movie_massage_title span")
+				var introduce=document.querySelector(".introduce");
+				
+				title.innerHTML=data.title;
+				movie_name.innerHTML=data.title;
+				movie_img.src=data.images.large;
+				movie_img.title=data.title;
+				
+				var s='';
+				for(var i=0;i<data.directors.length;i++){
+					s+='<a href='+data.directors[i].alt+'>'+data.directors[i].name+'</a>'
+				}
+				director.innerHTML=s;
+				writer.innerHTML=s;
+				
+				
+				var s1='';
+				for(var i=0;i<data.casts.length;i++){
+					s1+='<a href='+data.casts[i].alt+'>'+data.casts[i].name+'</a> /'
+				}
+				actors.innerHTML=s1;
+				
+				
+				
+				var s2='';
+				for(var i=0;i<data.genres.length;i++){
+					s2+=data.genres[i]+' /'
+				}
+				tag.innerHTML=s2;
+
+				year.innerHTML=data.year;
+				collects.innerHTML=data.collect_count;
+				wish.innerHTML=data.wish_count;
+				origin_name.innerHTML=data.original_title;
+				rating.innerHTML=data.rating.average;
+				
+				
+				switch(Math.round(data.rating.average)){
+						case 10:
+						star.style['background-position']='0px 0px';
+						break;
+						
+						case 9:
+						star.style['background-position']='0px -15px';
+						break;
+						
+						case 8:
+						star.style['background-position']='0px -30px';
+						break;
+						
+						case 7:
+						star.style['background-position']='0px -45px';
+						break;
+						
+						case 6:
+						star.style['background-position']='0px -60px';
+						break;
+						
+						case 5:
+						star.style['background-position']='0px -75px';
+						break;
+						
+						case 4:
+						star.style['background-position']='0px -90px';
+						break;
+						
+						case 3:
+						star.style['background-position']='0px -105px';
+						break;
+						
+						case 2:
+						star.style['background-position']='0px -120px';
+						break;
+						
+						case 1:
+						star.style['background-position']='0px -135px';
+						break;
+						
+						case 0:
+						star.style['background-position']='0px -150px';
+						break;
+					};
+
+				comments.innerHTML=data.reviews_count+'人评价';
+				describtion.innerHTML=data.title;
+				introduce.innerHTML=data.summary;
+			}
+		</script>
+	</body>
+</html>

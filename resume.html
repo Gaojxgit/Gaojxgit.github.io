@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link href="css/bootstrap.css" rel="stylesheet"/>
+		<link href="css/resume.css" rel="stylesheet"/>
+		<title>个人简历</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">小站</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="/index">听音乐</a></li>
+					<li><a href="/movie">搜电影</a></li>
+					<li><a href="/play">玩游戏</a></li>
+					<li class="active"><a href="/resume">个人简历</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container content_box">
+			<div class="col-lg-3 time">
+				<div class="clock">
+					<span class="north"></span>
+					<span class="west"></span>
+					<span class="east"></span>
+					<span class="south"></span>
+					<div class="minute"></div>
+					<div class="hour"></div>
+					<div class="second"></div>
+					<div class="glory">
+					</div>
+				</div>
+				<div class="calendar">
+					<h4 id="choose">
+						<a></a>
+						<select id="year" value="2016">					
+						</select> 年
+						<select id="month">					
+						</select> 月
+						<a></a>
+					</h4>
+					<ul id="number">
+						<li>日</li>
+						<li>一</li>
+						<li>二</li>
+						<li>三</li>
+						<li>四</li>
+						<li>五</li>
+						<li>六</li>				
+					</ul>
+					<div id="content"></div>
+				</div>
+				
+			</div>
+			<div class="col-lg-8 profile_box" data-spy="scroll" data-target="#scrollBar" data-offset=50>
+				<ul>
+					<li id="profile">
+						<h3>个人资料</h3>
+						<ul>
+							<li>姓名 ： 高建勋</li>
+							<li>性别 ： 男</li>
+							<li>学历 ： 本科</li>
+							<li>籍贯 ： 山西大同</li>
+							<li>专业：电子信息工程</li>
+							<li>年龄 ： 25</li>
+							<li>邮箱 ： 281852667@qq.com</li>
+							<li>电话 ： 18636864465</li>
+							<li>求职岗位 ： 前端工程师</li>
+							
+						</ul>
+					</li>
+					<li id="skill">
+						<h3>工作技能</h3>
+						<p>扎实的原生<code class="tool" data-toggle='tooltip' title="javascript是一个脚本语言" data-placment='top'>javascript</code>技术，对后端有一定的了解，具有良好的解决问题的能力。对前端由衷的热爱，关注前端技术的发展，进行不断的自我学习（前后台数据交互无问题）</p>
+						<ul>
+							<li>可以使用<code>HTML</code>和<code>CSS</code>快速高效的进行开发，写出具有语义化和利于SEO的代码，熟知W3C标准，可以很好的还原设计图并且兼容各大主流的浏览器。</li>
+							<li>精通<code>Javascript</code>语言核心技术<code>DOM</code>、<code>Function</code>、闭包、<code>Ajax</code>、<code>JSON</code>，<code>Cookie</code>，继承，构造函数等，熟悉HTTP请求原理和面向对象思想。</li>
+							<li>熟悉<code>HTML5</code>/<code>CSS3</code>前端开发技术，可以熟练的使用<code>Canvas</code>,<code>Audio</code>等，并可以很好的应用到实际项目</li>
+							<li>熟练使用<code>Less</code>编写<code>Css</code>样式，熟悉各种常见的布局技术<code>Rem</code>,百分比，<code>Flex</code>布局等，可以熟练使用<code>Bootstrap</code>开发响式页面，熟悉<code>Reactjs</code>了解其设计原理，并熟练运用。</li>
+							<li>能熟练使用原生<code>javaScript</code>或<code>jQuery</code>制作出页面动态效果，实现与后端数据的交互。可以手写原生Js组件和扩展jQuery插件</li>
+							<li>熟悉移动端开发布局主要原理，熟悉移动端事件和pc端事件的区别，了解移动端事件的特性，点透事件，300ms延迟等。熟悉与jQuery类似的<code>zeptojs</code>的核心，以及插件的使用。</li>
+							<li>熟悉<code>Nodejs</code>，了解其充分使用js语法当中非阻塞I/O，异步回调，事件轮询等重要的特性作为改语言的特点，可以手写简单的web应用，搭建静态文件服务器，使前后端实现基本的数据交互。</li>
+							<li>了解Mongodb数据库，能熟练使用git版本控制工具</li>
+						</ul>
+					</li>
+					<li id="experience">
+						<h3>项目经验</h3>
+						<p id="music">基于本地数据的音乐播放器 。主要技术点：<code>canvas</code>，<code>audio</code>，<code>javascript</code></p>
+						<ul>
+							<li>专辑封面图旋转：使用CSS3新特性<code>transform</code>配合音乐播放进度旋转 </li>
+							<li>音乐播放进度条：使用定时器配合<code>audio</code>标签属性实时更新进度条</li>
+							<li>拖拽改变播放进度：使用鼠标<code>mousedown</code>，<code>mousemove</code>等封装拖拽组件配合audio的currentTime属性</li>
+							<li>播放时进度条上的动画：使用HTML5新的<code>canvas</code>标签配合定时器实现</li>
+							<li>音量调节：使用封装的拖拽组件配合audio的<code>volume</code>属性调节音量</li>
+							<li>自定义滚动条：使用滚轮事件模拟滚动条，并且实现滚动条拖拽功能</li>
+							<li>单曲重播/循环播放：使用 audio的<code>loop</code>属性配合条件判断实现</li>
+						</ul>
+						<p id="movie">基于豆瓣电影影片信息展示。主要技术点：<code>json</code>,<code>jsonp</code>,<code>css3</code>,<code>javascript</code></p>
+						<ul>
+							<li>轮播图：使用原生js配合定时器加载静态资源实现</li>
+							<li>jsonp ： 通过豆瓣接口请求相关数据，动态载入页面</li>
+							<li>电影排序 ：通过算法实现对影片的显示顺序进行分类</li>
+							<li>回到顶部功能 ：利用<code>BOM</code>滚动条的位置实现回到顶部功能</li>
+							<li>固定导航条：<code>fixed</code>定位实现</li>
+							<li>分页：根据返回的数据的数量不同动态生成页码</li>
+							<li>利用html模板实现数据动态加载生成请求数据相关的页面</li>
+						</ul>
+						<p id="play">贪吃蛇游戏 。主要技术点：<code>transform</code>,<code>audio</code>,<code>javascript</code>,<code>dom</code>,碰撞检测</p>
+						<ul>
+							<li>碰撞检测技术 ：判断小球的位置，更新小球的长度</li>
+							<li><code>transform</code> ： 实现碰撞后的碎裂效果</li>
+							<li><code>DOM</code> ： 实时更新得分</li>
+							<li>游戏失败弹窗 ：自定义弹窗组件</li>
+							<li><code>audio</code>: 游戏音效的控制</li>
+							<li>键盘事件 ：控制小球的运动方向</li>
+							<li>得分数据：DOM操作</li>
+						</ul>
+						<p id="webblum">移动端相册 。主要技术点：移动端布局，<code>zeptojs</code>，<code>animate</code></p>
+						<ul>
+							<li>实现兼容不同移动设备：通过设置name为<code>viewport</code>的meta标签配合js实现自适应页面</li>
+							<li>页面载入动画：使用<code>Animate</code>库</li>
+							<li>点击查看大图：zepto的<code>tap</code>事件</li>
+							<li>左右滑动更换图片：zepto的<code>tap</code>,<code>swipeleft</code>,<code>swiperight</code>事件</li>
+						</ul>
+						<p id="resume">个人简历 。主要技术点：<code>bootstrap</code>,<code>Jquery</code>,日期对象，<code>css3</code>，<code>cookie</code></p>
+						<ul>
+							<li>栅格布局</li>
+							<li>滚动监听：利用<code>bootstrap</code>插件中重要的属性<code>data-spy="scroll"</code></li>
+							<li>实时时钟：利用日期对象Date，配合定时器以及css3的transform的<code>rotate</code>属性</li>
+							<li>可以查看任意年月的日历：不断设置它的值，取到不同年月对应的日期</li>
+							<li>备忘录：利用组件以及JQuery中DOM操作实现简单的备忘录功能</li>
+							<li>cookie：利用前端的cookie读取和设置，创建一个记录身份的cookie，初次打开页面，提示输入一个身份，再次打开验证cookie。模拟一个引导功能</li>
+						</ul>
+					</li>
+					<li id="comment">
+						<p>其他</p>
+						<ul>
+							<li>熟练使用photoshop，illustrator</li>
+							<li>基本的英文读写能力，能读懂有关技术文档</li>
+							<li>喜欢研究新技术，对nodejs有浓厚兴趣，渴望成为一名能利用js打通前后端的全栈工程师</li>
+							<li>身体健康，喜欢运动</li>
+						</ul>
+						<img src="img/smartisan.jpg" />
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-1">
+					<div id="scrollBar" class="navbar-collapse">
+						<ul class="nav">
+							<li>
+								<a href="#profile">个人资料</a>
+							</li>
+							<li>
+								<a href="#skill">工作技能</a>
+							</li>
+							<li>
+								<a href="#experience">项目经验</a>
+								<ul class="nav">
+									<li><a href="#music">音乐播放器</a></li>
+									<li><a href="#movie">豆瓣电影</a></li>
+									<li><a href="#play">贪吃蛇</a></li>
+									<li><a href="#webblum">移动端相册</a></li>
+									<li><a href="#resume">个人简历</a></li>
+								</ul>
+							</li>
+							<li ><a href="#comment">其他</a></li>
+						</ul>
+					</div>
+					
+				</div>
+		</div>
+		<div class="mask">
+			<div class="container pop">
+			<div class="row first">
+				<form action="#" class="form-horizontal">
+					<div class="form-group form-group-sm">
+						<label for="userName" class="col-lg-1  col-lg-offset-4 control-label">用户名</label>
+						<div class="col-lg-3">
+							<input type="text" id="userName" class="form-control" placeholder="随意输入字符"/>
+						</div>
+					</div>
+				</form>	
+			</div>
+			<div class="row">
+				<form action="#" class="form-horizontal">
+					<div class="form-group form-group-sm">
+						<label for="password" class="col-lg-1 col-lg-offset-4 control-label">密码</label>
+						<div class="col-lg-3">
+							<input type="password" id="password" class="form-control" placeholder="输入密码" />
+						</div>
+					</div>
+				</form>	
+			</div>
+			<div class="row">
+				
+						<div class="col-lg-1 col-lg-offset-5">
+							<button class="btn btn-default btn-sm">确定</button>
+						</div>
+						<div class="col-lg-1 col-lg-offset-1">
+							<button class="btn btn-default btn-sm">取消</button>
+						</div>
+				
+			</div>
+		</div>
+		</div>
+		
+		
+		<script src="js/jquery-2.1.0.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/resume.js"></script>
+	</body>
+</html>

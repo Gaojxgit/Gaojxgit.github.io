@@ -1,0 +1,135 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+ul{
+	list-style: none;
+}
+body{
+	background: #111;
+	padding: 0px;
+	margin: 0px;
+}
+nav{
+	position: relative;
+}
+header{
+	width:1200px;
+	min-width: 1200px;
+	margin:0px auto;
+	color: #f0f0f0;
+}
+header:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+header h3,header a{
+	float: left;
+}
+header h3{
+	margin:0px;
+}
+header a{
+	margin-left:20px;
+	font-size: 14px;
+	cursor: pointer;
+	color: #ccc;
+	text-decoration: none;
+}
+header a.active,header a:hover{
+	color:#eee;
+}
+header h3,a,form{
+	line-height: 50px;
+}
+.playarea{
+	width:800px;
+	height:500px;
+	float: left;
+	position: relative;
+	margin-left: 100px;
+	background: #eee;
+}
+.pop{
+	width: 100%;
+	height:100%;
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	text-align: center;				
+}
+.pop .alert{
+	display: flex;
+	width:200px;
+	height:100px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	background: #ccc;
+	margin-left: -100px;
+	margin-top: -50px;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.snake li{
+	border-radius:50%;
+	width:20px;
+	height:20px;
+	position: absolute;
+	background: blue;
+}
+.pot{
+	width:20px;
+	height:20px;
+	position: absolute;
+	background: red;
+
+}
+.boom{
+	position:absolute;
+	width:20px;
+	height:20px;
+	transform-style:preserve-3d;
+	perspective:800px;
+}
+.describe{
+	width:360px;
+	background: #ddd;
+	height: 478px;
+	float: left;
+	padding: 10px;
+	border: 1px solid #ccc;
+	color:#444;
+}
+.describe h4{
+	text-align: center;
+	color: #333;
+	font: 22px/40px "微软雅黑";
+	border-bottom: 1px solid #ccc;
+}
+.describe .score{
+	font: 18px/36px "微软雅黑";
+}
+.describe .score span{
+	color:red
+}
+.describe li{
+	padding-left: 20px;
+}
+.describe button{
+	font: 14px/24px "微软雅黑";
+	margin-top: 20px;
+	padding: 0px 10px;
+	outline: none;
+	background: linear-gradient(0deg,#bbb,#f0f0f0);
+	cursor: pointer;
+}
+.describe section{
+	margin-bottom: 20px;
+}
+.mode,.control{
+	text-align: center;
+}
+.describe .active{
+	background: linear-gradient(0deg,#f0f0f0,#bbb);
+}
