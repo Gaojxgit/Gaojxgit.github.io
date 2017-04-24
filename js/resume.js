@@ -227,7 +227,6 @@ $(document).on('click',function(){
 $('#content span p').remove();
 $('#content span .put').remove();
 $('#content span ul').remove();
-	return false;
 })
 
 var cookieUtil={
