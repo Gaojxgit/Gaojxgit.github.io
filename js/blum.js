@@ -35,7 +35,7 @@ var bigImage=$('#bigImg');
 var loadBig=function(num,callback){
 	
 	var img=new Image();
-	img.src='img/'+num+'.large.jpg';
+	img.src='img/'+num+'.jpg';
 	img.onload=function(){
 		img_box.show();
 		var w=this.width;
@@ -44,7 +44,7 @@ var loadBig=function(num,callback){
 		var paddingTop=(win.height()-h*win.width()/w)/2;
 		var paddingLeft=(win.width()-w*win.height()/h)/2; 
 		
-		bigImage.attr('src','img/'+num+'.large.jpg');
+		bigImage.attr('src','img/'+num+'.jpg');
 		
 		bigImage.css({
 				'width':'auto',
